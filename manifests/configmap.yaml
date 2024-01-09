@@ -5,12 +5,13 @@ metadata:
   name: semaphore-cfg
 
 data:
+  SEMAPHORE_PORT: "3000"
   SEMAPHORE_DB_HOST: "/opt/semaphore_data/bolt.db"
   SEMAPHORE_DB_DIALECT: "bolt"
   SEMAPHORE_DB: "semaphore"
 
   SEMAPHORE_ADMIN_NAME: "semaphore-admin"
-  SEMAPHORE_ADMIN_EMAIL: "shevchenko.v87@wb.ru"
+  SEMAPHORE_ADMIN_EMAIL: "somemail@some.host"
   SEMAPHORE_ADMIN: semaphore-admin
 
   SEMAPHORE_LDAP_ACTIVATED: 'no'

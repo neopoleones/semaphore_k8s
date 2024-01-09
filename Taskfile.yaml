@@ -1,7 +1,17 @@
 version: 3
 
 tasks:
-  hello_world:
+  create_ns:
     cmds:
-      - 'whoami'
-    desc: 'Runs whoami on machine'
+      - 'kubectl create namespace semaphore'
+    desc: 'Creates app namespace'
+  
+  create_secret:
+    cmds:
+      - 'python3 gen_secret.py'
+    desc: 'Creates Secret manifest'
+  
+  apply:
+    cmds:
+      - 'kubectl apply -f ./manifests -n semaphore'
+    desc: 'Applies the manifests on namespace semaphore' 

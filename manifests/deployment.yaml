@@ -32,9 +32,9 @@ spec:
           effect: "NoSchedule"
 
       volumes:
-        - name: playbookVolume
-          persistentVolumeClaim:
-            claimName: semaphore
+      - name: semaphore-storage
+        persistentVolumeClaim:
+          claimName: semaphore-pvc
 
       containers:
         - name: semaphore
@@ -75,7 +75,7 @@ spec:
           resources:
             limits:
               cpu: "1"
-              memory: "1024Mi"
+              memory: "2048Mi"
 
             requests:
               cpu: "200m"
@@ -83,4 +83,4 @@ spec:
 
           volumeMounts:
             - mountPath: /opt/semaphore_data/
-              name: playbookVolume
+              name: semaphore-storage

@@ -4,15 +4,18 @@ kind: Service
 metadata:
   name: semaphore
   labels:
-    app: semaphore-test
+    app: semaphore
     version: v2.9.37
 
 spec:
+  type: NodePort
+
   selector:
-    app: semaphore-test
+    app: semaphore
     version: v2.9.37
 
   ports:
     - protocol: TCP
       port: 3000
-      targetPort: http
+      targetPort: 3000
+      nodePort: 30030
