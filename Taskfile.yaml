@@ -1,0 +1,7 @@
+version: 3
+
+tasks:
+  hello_world:
+    cmds:
+      - 'whoami'
+    desc: 'Runs whoami on machine'
