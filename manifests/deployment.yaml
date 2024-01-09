@@ -32,7 +32,7 @@ spec:
           effect: "NoSchedule"
 
       volumes:
-        - name: playbook_volume
+        - name: playbookVolume
           persistentVolumeClaim:
             claimName: semaphore
 
@@ -83,4 +83,4 @@ spec:
 
           volumeMounts:
             - mountPath: /opt/semaphore_data/
-              name: playbook_volume
+              name: playbookVolume
